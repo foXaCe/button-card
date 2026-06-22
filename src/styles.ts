@@ -525,6 +525,31 @@ export const styles = css`
       height: 100%;
     }
   }
+
+  /* Accessibility: visible keyboard focus ring (overridable via theme). */
+  #card:focus-visible,
+  #icon:focus-visible {
+    outline: 2px solid var(--button-card-focus-color, var(--primary-color, #03a9f4));
+    outline-offset: -2px;
+  }
+  #card:focus:not(:focus-visible),
+  #icon:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  /* Respect the user's reduced-motion preference for the card's built-in
+     animations. User animations defined via "styles:" still win, as they are
+     injected later in the cascade. */
+  @media (prefers-reduced-motion: reduce) {
+    [rotating],
+    .invalid {
+      animation-duration: 0.01ms;
+      animation-iteration-count: 1;
+    }
+    .hidden {
+      transition: none;
+    }
+  }
 `;
 
 export default styles;

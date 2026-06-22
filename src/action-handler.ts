@@ -1,7 +1,7 @@
-import { noChange } from 'lit-html';
+import { noChange } from 'lit';
 import { fireEvent } from './common/fire-event';
 import { deepEqual } from './deep-equal';
-import { AttributePart, Directive, DirectiveParameters, directive } from 'lit-html/directive.js';
+import { AttributePart, Directive, DirectiveParameters, directive } from 'lit/directive.js';
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore

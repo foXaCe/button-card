@@ -2,9 +2,9 @@ import { LitElement, html, TemplateResult, CSSResult, PropertyValues, nothing } 
 import { customElement, property, queryAsync } from 'lit/decorators.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import { until } from 'lit/directives/until.js';
-import { styleMap, StyleInfo } from 'lit-html/directives/style-map.js';
-import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
-import { classMap, ClassInfo } from 'lit-html/directives/class-map.js';
+import { styleMap, StyleInfo } from 'lit/directives/style-map.js';
+import { unsafeHTML } from 'lit/directives/unsafe-html.js';
+import { classMap, ClassInfo } from 'lit/directives/class-map.js';
 import { HassEntities, HassEntity } from 'home-assistant-js-websocket';
 import { LovelaceCard } from './types/lovelace';
 import {
@@ -191,6 +191,8 @@ class ButtonCard extends LitElement {
   private _initialSetupComplete = false;
 
   private _cardClickable = false;
+
+  private _cardHasActions = false;
 
   private _iconClickable = false;
 
@@ -974,6 +976,12 @@ class ButtonCard extends LitElement {
     return style;
   }
 
+  // Accessible name for screen readers: the visible name, or the entity's
+  // friendly name / id as fallback (even when the name is visually hidden).
+  private _a11yLabel(state: HassEntity | undefined, configState: StateConfig | undefined): string | undefined {
+    return this._buildName(state, configState) ?? state?.attributes?.friendly_name ?? this._config?.entity;
+  }
+
   private _buildName(state: HassEntity | undefined, configState: StateConfig | undefined): string | undefined {
     if (this._config!.show_name === false) {
       return undefined;
@@ -1193,6 +1201,7 @@ class ButtonCard extends LitElement {
       !!(configState && this._hasChildCards(configState.custom_fields));
     const rippleEnabled = this._getTemplateOrValue(state, this._config!.show_ripple);
     const cardHasActions = tapActive || holdActive || doubleTapActive || pressActive || releaseActive;
+    this._cardHasActions = cardHasActions;
     this._cardClickable = cardHasActions || hasChildCards;
     this._hasIconActions =
       iconTapActive || iconHoldActive || iconDoubleTapActive || iconPressActive || iconReleaseActive;
@@ -1311,11 +1320,24 @@ class ButtonCard extends LitElement {
         `
       : html``;
     const holdActionEvaluated = this._partialActionEval(this._config!.hold_action);
+    const cardAriaLabel = this._cardHasActions ? this._a11yLabel(this._stateObj, configState) : undefined;
+    const cardTapAction = this._config!.tap_action;
+    const cardIsToggle = !!cardTapAction && typeof cardTapAction === 'object' && cardTapAction.action === 'toggle';
+    const cardAriaPressed =
+      this._cardHasActions && cardIsToggle && this._stateObj
+        ? stateActive(this._stateObj)
+          ? 'true'
+          : 'false'
+        : undefined;
     return html`
       ${extraStyles}
       <div id="aspect-ratio" style=${styleMap(aspectRatio)}>
         <ha-card
           id="card"
+          role=${this._cardHasActions ? 'button' : nothing}
+          tabindex=${ifDefined(this._cardHasActions && !this._config?.disable_kbd ? '0' : undefined)}
+          aria-label=${ifDefined(cardAriaLabel)}
+          aria-pressed=${ifDefined(cardAriaPressed)}
           class=${classMap(classList)}
           style=${styleMap(cardStyle)}
           @wa-show=${this._tooltipShow}
@@ -1552,6 +1574,9 @@ class ButtonCard extends LitElement {
                   style=${styleMap(haIconStyle)}
                   .icon="${icon}"
                   id="icon"
+                  role=${this._hasIconActions ? 'button' : nothing}
+                  tabindex=${ifDefined(this._hasIconActions && !this._config?.disable_kbd ? '0' : undefined)}
+                  aria-label=${ifDefined(this._hasIconActions ? this._a11yLabel(state, configState) : undefined)}
                   ?rotating=${this._rotate(configState)}
                   @action=${this._hasIconActions
                     ? (ev: CustomEvent) => this._handleAction(ev, { isIcon: true })
@@ -1585,6 +1610,9 @@ class ButtonCard extends LitElement {
                   src=${until(entityPicture)}
                   style=${styleMap(entityPictureStyle)}
                   id="icon"
+                  role=${this._hasIconActions ? 'button' : nothing}
+                  tabindex=${ifDefined(this._hasIconActions && !this._config?.disable_kbd ? '0' : undefined)}
+                  aria-label=${ifDefined(this._hasIconActions ? this._a11yLabel(state, configState) : undefined)}
                   ?rotating=${this._rotate(configState)}
                   draggable="false"
                   @action=${this._hasIconActions
