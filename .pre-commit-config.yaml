@@ -1,0 +1,26 @@
+# Runner: prek (drop-in for pre-commit). Install: pipx install prek && prek install
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-yaml
+        args: [--unsafe] # docs/mkdocs.yml uses custom YAML tags
+      - id: check-json
+        exclude: ^(\.vscode/|\.devcontainer/) # JSONC with comments
+      - id: check-merge-conflict
+      - id: check-added-large-files
+        args: [--maxkb=1500]
+        exclude: ^(yarn\.lock|examples/|docs/source/images/)
+      - id: end-of-file-fixer
+        exclude: ^(CHANGELOG\.md|yarn\.lock|examples/|docs/source/images/)
+      - id: trailing-whitespace
+        exclude: ^(CHANGELOG\.md|yarn\.lock|examples/|docs/source/images/)
+
+  - repo: local
+    hooks:
+      - id: eslint
+        name: eslint (yarn lint)
+        entry: yarn lint
+        language: system
+        pass_filenames: false
+        files: ^src/.*\.ts$

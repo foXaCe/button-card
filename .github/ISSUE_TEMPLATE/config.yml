@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Home Assistant Community Forum
+    url: https://community.home-assistant.io/t/lovelace-button-card/65981
+    about: For usage questions and configuration help, please use the forum thread.
+  - name: HA Discord
+    url: https://discord.gg/Qa5fW2R
+    about: Chat with the community.

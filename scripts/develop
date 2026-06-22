@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+# Rebuild the bundle on change and serve dist/ on :5000.
+cd "$(dirname "$0")/.."
+exec yarn watch

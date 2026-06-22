@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/custom-cards/button-card.git"
+    "url": "git+https://github.com/foXaCe/button-card.git"
   },
   "keywords": [
     "lovelace"
@@ -27,9 +27,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/custom-cards/button-card/issues"
+    "url": "https://github.com/foXaCe/button-card/issues"
   },
-  "homepage": "https://github.com/custom-cards/button-card#readme",
+  "homepage": "https://github.com/foXaCe/button-card#readme",
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
