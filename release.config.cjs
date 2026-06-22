@@ -31,6 +31,14 @@ module.exports = {
       },
     ],
     [
+      // Build the bundle (with the freshly bumped version) so that the
+      // gitignored dist/*.js exists for @semantic-release/github to attach.
+      '@semantic-release/exec',
+      {
+        prepareCmd: 'yarn build',
+      },
+    ],
+    [
       '@semantic-release/git',
       {
         assets: ['CHANGELOG.md', 'README.md', 'package.json', 'yarn.lock'],
