@@ -448,5 +448,5 @@ export function isButtonCardTemplate(value: any | undefined): boolean {
   const trimmed = value.trim();
   const rx = new RegExp('(\\[{3,})(.*?)(\\]{3,})', 's');
   const match = trimmed.match(rx);
-  return !!(match && matchMedia.length === 4);
+  return !!(match && match.length === 4);
 }
