@@ -12,7 +12,7 @@
     ":timezone(Europe/Paris)",
     "schedule:nonOfficeHours"
   ],
-  "baseBranches": ["main"],
+  "baseBranchPatterns": ["main"],
   "labels": ["dependencies"],
   "assignees": ["foXaCe"],
   "prCreation": "immediate",
