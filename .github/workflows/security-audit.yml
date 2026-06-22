@@ -1,0 +1,89 @@
+name: Security audit
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: ['*']
+  schedule:
+    - cron: '0 6 * * *' # daily — CVEs do not wait for Monday
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: security-audit-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  osv-scanner:
+    name: OSV-Scanner
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - name: Run OSV-Scanner
+        uses: google/osv-scanner-action/osv-scanner-action@v2.2.4
+        with:
+          scan-args: |-
+            --lockfile=yarn.lock
+            --lockfile=requirements.txt:docs/requirements.txt
+
+  yarn-audit:
+    name: yarn audit (informational)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24.x'
+      - name: yarn audit (high+)
+        run: yarn audit --level high || true
+
+  gitleaks:
+    name: Gitleaks
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  dependency-review:
+    name: Dependency review
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    if: github.event_name == 'pull_request'
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/dependency-review-action@v4
+        with:
+          fail-on-severity: high
+          comment-summary-in-pr: on-failure
+
+  lockfile-freshness:
+    name: Lockfile freshness
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Check yarn.lock age
+        run: |
+          AGE=$(( ($(date +%s) - $(git log -1 --format=%ct -- yarn.lock)) / 86400 ))
+          echo "yarn.lock last modified $AGE days ago"
+          if [ "$AGE" -gt 365 ]; then
+            echo "::error file=yarn.lock::yarn.lock not refreshed in $AGE days → run 'yarn install' to refresh"
+            exit 1
+          elif [ "$AGE" -gt 90 ]; then
+            echo "::warning file=yarn.lock::yarn.lock is aging ($AGE days). Renovate lockFileMaintenance refreshes it weekly."
+          fi

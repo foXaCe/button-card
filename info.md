@@ -21,10 +21,10 @@
 - [blink](#blink) animation support
 - rotating animation support
 - confirmation popup for sensitive items (optional) or [locking mecanism](#lock)
-- haptic support for the [Beta IOS App](http://home-assistant.io/ios/beta)
-- support for [custom_updater](https://github.com/custom-components/custom_updater) and [hacs](https://github.com/custom-components/hacs)
+- haptic support for the [iOS companion app](https://companion.home-assistant.io/docs/integrations/haptics)
+- support for [HACS](https://github.com/hacs/integration)
 
 ### Example:
-<img src="https://github.com/custom-cards/button-card/raw/master/examples/all.gif?raw=true" width="509px">
+<img src="https://github.com/foXaCe/button-card/raw/main/examples/all.gif?raw=true" width="509px">
 
-### See the <a href="https://github.com/custom-cards/button-card/blob/master/README.md" target="_blank">Readme for installation and configuration</a>.
+### See the <a href="https://github.com/foXaCe/button-card/blob/main/README.md" target="_blank">Readme for installation and configuration</a>.

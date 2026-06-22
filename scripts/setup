@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+# Install dependencies and git hooks.
+cd "$(dirname "$0")/.."
+
+yarn install --frozen-lockfile
+
+if command -v prek >/dev/null 2>&1; then
+  prek install
+elif command -v pre-commit >/dev/null 2>&1; then
+  pre-commit install
+else
+  echo "Tip: install prek (pipx install prek) for fast pre-commit hooks."
+fi
+
+echo "Setup complete. Next: scripts/develop"
