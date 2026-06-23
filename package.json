@@ -80,6 +80,6 @@
     "lodash": "4.18.1",
     "serialize-javascript": "7.0.5",
     "esbuild": "0.28.1",
-    "prettier-eslint/**/minimatch": "9.0.9"
+    "prettier-eslint/**/minimatch": "10.2.3"
   }
 }
