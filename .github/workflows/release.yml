@@ -22,7 +22,7 @@ jobs:
     if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev'
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0 # full history + tags so semantic-release can determine the version
       - name: Use Node.js ${{ env.NODE_VERSION }}
