@@ -46,13 +46,13 @@
     "@semantic-release/release-notes-generator": "^14.1.1",
     "@typescript-eslint/eslint-plugin": "^8.46.2",
     "@typescript-eslint/parser": "^8.46.2",
-    "conventional-changelog-conventionalcommits": "^9.1.0",
+    "conventional-changelog-conventionalcommits": "^9.3.1",
     "eslint": "9.38.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^5.5.4",
-    "npm": "^11.5.2",
+    "npm": "^11.17.0",
     "prettier": "^3.6.2",
     "prettier-eslint": "^16.4.2",
     "rollup": "^4.52.5",
@@ -70,12 +70,12 @@
   "dependencies": {
     "@ctrl/tinycolor": "^4.2.0",
     "fast-copy": "^3.0.2",
-    "home-assistant-js-websocket": "^9.5.0",
+    "home-assistant-js-websocket": "^9.6.0",
     "lit": "^3.3.3",
     "memoize-one": "^6.0.0",
-    "parse-duration": "^2.1.4"
+    "parse-duration": "^2.1.6"
   },
   "resolutions": {
-    "errorstacks": "2.4.1"
+    "errorstacks": "2.4.2"
   }
 }
