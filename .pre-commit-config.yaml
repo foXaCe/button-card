@@ -1,4 +1,11 @@
 # Runner: prek (drop-in for pre-commit). Install: pipx install prek && prek install
+
+# pre-commit.ci runs in a sandbox without yarn/node_modules, so the local
+# `eslint` hook (entry: yarn lint) cannot run there. ESLint is already enforced
+# by the dedicated `lint` CI job, so skip it on the hosted service only.
+ci:
+  skip: [eslint]
+
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0

@@ -76,6 +76,10 @@
     "parse-duration": "^2.1.6"
   },
   "resolutions": {
-    "errorstacks": "2.4.2"
+    "errorstacks": "2.4.2",
+    "lodash": "4.18.1",
+    "serialize-javascript": "7.0.5",
+    "esbuild": "0.28.1",
+    "prettier-eslint/**/minimatch": "9.0.9"
   }
 }
