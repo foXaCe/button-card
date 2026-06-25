@@ -1530,7 +1530,7 @@
   resolved "https://registry.yarnpkg.com/@types/yarnpkg__lockfile/-/yarnpkg__lockfile-1.1.9.tgz#b3c8e8d66dc8ce79827f422a660a557cda9ded14"
   integrity sha512-GD4Fk15UoP5NLCNor51YdfL9MSdldKCqOC9EssrRw3HVfar9wUZ5y8Lfnp+qVD6hIinLr8ygklDYnmlnlQo12Q==
 
-"@typescript-eslint/eslint-plugin@^8.61.1":
+"@typescript-eslint/eslint-plugin@^8.62.0":
   version "8.62.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-8.62.0.tgz#ef482aab65b9b2c0abf92d36d670a0d270bcef4c"
   integrity sha512-o+mpz7EYiMzXoySXiKmzlabIvTVqUuK5yLrAedRPRDA0IpPFMUV1IXt6OqljIxX/kumN6EjUYp41Hqelh6p/Dw==
@@ -1555,7 +1555,7 @@
     "@typescript-eslint/visitor-keys" "6.21.0"
     debug "^4.3.4"
 
-"@typescript-eslint/parser@^8.61.1":
+"@typescript-eslint/parser@^8.62.0":
   version "8.62.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-8.62.0.tgz#8533094fb44427f50b82813c6d3876782f20dc3e"
   integrity sha512-dzHeT2gySzZtLDsuqxU9AkYgIsQoHAHtRBpOqM+Ofzx1Bwrd2RcCjQJ+6iQbsHOIR6NS33bF2W1k3blN1zLDrA==
