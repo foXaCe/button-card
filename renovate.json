@@ -81,6 +81,11 @@
       "matchPackageNames": ["/^@babel//"]
     },
     {
+      "description": "conventional-changelog-conventionalcommits v10 silently breaks release notes: with @semantic-release/release-notes-generator 14 it renders an empty body (title only, no Bug Fixes section) and exits 0, so CI cannot catch it. Verified on v7.1.2. Stay on v9 until the preset is compatible.",
+      "matchPackageNames": ["conventional-changelog-conventionalcommits"],
+      "allowedVersions": "<10"
+    },
+    {
       "description": "Major updates need review",
       "matchUpdateTypes": ["major"],
       "labels": ["dependencies", "major"],
