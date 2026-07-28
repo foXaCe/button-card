@@ -86,6 +86,11 @@
       "allowedVersions": "<10"
     },
     {
+      "description": "TypeScript 7 is not usable here yet: @typescript-eslint/parser refuses to load with 'typescript-eslint does not support TS 7.0' (its peer range is >=4.8.4 <6.1.0, alphas included), and rollup-plugin-typescript2 crashes on 'tsModule.createDocumentRegistry is not a function' since TS 7 dropped the API it relies on. Both are upstream blockers with no compatible release. Lift this once typescript-eslint ships TS 7 support and the rollup plugin follows.",
+      "matchPackageNames": ["typescript"],
+      "allowedVersions": "<7"
+    },
+    {
       "description": "Major updates need review",
       "matchUpdateTypes": ["major"],
       "labels": ["dependencies", "major"],
