@@ -1,0 +1,30 @@
+# OSV-Scanner configuration
+# https://google.github.io/osv-scanner/configuration/
+#
+# Only add entries here when a finding has no upgrade path. Everything that can
+# be fixed by bumping a version must be bumped instead — see .github/workflows/security-audit.yml.
+
+[[PackageOverrides]]
+name = "brace-expansion"
+version = "1.1.16"
+ecosystem = "npm"
+ignore = true
+effectiveUntil = 2026-10-31
+reason = """
+GHSA-mh99-v99m-4gvg (DoS via unbounded brace expansion) covers every version < 5.0.8,
+so the 1.x branch has no fixed release — 1.1.16 is the last one published.
+
+Not upgradable: 1.1.16 is pulled in by minimatch@3.1.5, itself required by eslint,
+eslint-plugin-import, @eslint/eslintrc, @eslint/config-array and prettier-eslint.
+Forcing brace-expansion 5.x through a yarn resolution breaks minimatch 3.x — the 5.x
+CommonJS entry point exports an object ({ expand, EXPANSION_MAX, ... }) instead of the
+bare function minimatch 3.x calls, so any glob containing braces throws
+"TypeError: expand is not a function".
+
+Impact accepted: devDependency only (lint/format tooling), never bundled into
+dist/button-card.js. The only patterns expanded are the repo's own lint globs — no
+untrusted input reaches it.
+
+Pinned to 1.1.16 on purpose: if the dependency tree ever resolves a different 1.x
+version this override stops applying and the finding surfaces again for review.
+"""
