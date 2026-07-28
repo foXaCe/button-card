@@ -1499,27 +1499,33 @@ class ButtonCard extends LitElement {
     return html`
       <div id="container" class=${itemClass.join(' ')} style=${styleMap(gridStyleFromConfig)}>
         ${iconTemplate ? iconTemplate : ''}
-        ${name
-          ? html`
-              <div id="name" class="ellipsis" style=${styleMap(nameStyleFromConfig)}>
-                ${this._unsafeHTMLorNot(name)}
-              </div>
-            `
-          : ''}
-        ${stateString
-          ? html`
-              <div id="state" class="ellipsis" style=${styleMap(stateStyleFromConfig)}>
-                ${this._unsafeHTMLorNot(stateString)}
-              </div>
-            `
-          : ''}
-        ${label && !lastChangedTemplate
-          ? html`
-              <div id="label" class="ellipsis" style=${styleMap(labelStyleFromConfig)}>
-                ${this._unsafeHTMLorNot(label)}
-              </div>
-            `
-          : ''}
+        ${
+          name
+            ? html`
+                <div id="name" class="ellipsis" style=${styleMap(nameStyleFromConfig)}>
+                  ${this._unsafeHTMLorNot(name)}
+                </div>
+              `
+            : ''
+        }
+        ${
+          stateString
+            ? html`
+                <div id="state" class="ellipsis" style=${styleMap(stateStyleFromConfig)}>
+                  ${this._unsafeHTMLorNot(stateString)}
+                </div>
+              `
+            : ''
+        }
+        ${
+          label && !lastChangedTemplate
+            ? html`
+                <div id="label" class="ellipsis" style=${styleMap(labelStyleFromConfig)}>
+                  ${this._unsafeHTMLorNot(label)}
+                </div>
+              `
+            : ''
+        }
         ${lastChangedTemplate ? lastChangedTemplate : ''} ${this._buildCustomFields(state, configState)}
       </div>
     `;
@@ -1562,83 +1568,91 @@ class ButtonCard extends LitElement {
       const iconHoldActionEvaluated = this._partialActionEval(this._config!.icon_hold_action);
       return html`
         <div id="img-cell" style=${styleMap(imgCellStyleFromConfig)}>
-          ${shouldShowIcon && !entityPicture && !liveStream
-            ? html`
-                <ha-state-icon
-                  class=${classMap(classList)}
-                  .state=${state}
-                  .stateObj=${state}
-                  .hass=${this._hass}
-                  ?data-domain=${domain}
-                  data-state=${ifDefined(state?.state)}
-                  style=${styleMap(haIconStyle)}
-                  .icon="${icon}"
-                  id="icon"
-                  role=${this._hasIconActions ? 'button' : nothing}
-                  tabindex=${ifDefined(this._hasIconActions && !this._config?.disable_kbd ? '0' : undefined)}
-                  aria-label=${ifDefined(this._hasIconActions ? this._a11yLabel(state, configState) : undefined)}
-                  ?rotating=${this._rotate(configState)}
-                  @action=${this._hasIconActions
-                    ? (ev: CustomEvent) => this._handleAction(ev, { isIcon: true })
-                    : undefined}
-                  @pointerenter=${this._hasIconActions ? this._handleRippleIcon : undefined}
-                  @pointerleave=${this._hasIconActions ? this._handleRippleIcon : undefined}
-                  @click=${this._hasIconActions ? this._sendToParent : undefined}
-                  @touchstart=${this._hasIconActions ? this._sendToParent : undefined}
-                  @mousedown=${this._hasIconActions ? this._sendToParent : undefined}
-                  @mouseup=${this._hasIconActions ? this._sendToParent : undefined}
-                  @touchend=${this._hasIconActions ? this._sendToParent : undefined}
-                  @touchcancel=${this._hasIconActions ? this._sendToParent : undefined}
-                  .actionHandler=${this._hasIconActions
-                    ? actionHandler({
-                        hasDoubleClick: this._isActionDoingSomething(state, this._config!.icon_double_tap_action),
-                        hasHold: this._isActionDoingSomething(state, this._config!.icon_hold_action),
-                        repeat: iconHoldActionEvaluated?.repeat,
-                        repeatLimit: iconHoldActionEvaluated?.repeat_limit,
-                        isMomentary: this._iconMomentary,
-                        disableKbd: this._config?.disable_kbd,
-                      })
-                    : undefined}
-                ></ha-state-icon>
-              `
-            : ''}
+          ${
+            shouldShowIcon && !entityPicture && !liveStream
+              ? html`
+                  <ha-state-icon
+                    class=${classMap(classList)}
+                    .state=${state}
+                    .stateObj=${state}
+                    .hass=${this._hass}
+                    ?data-domain=${domain}
+                    data-state=${ifDefined(state?.state)}
+                    style=${styleMap(haIconStyle)}
+                    .icon="${icon}"
+                    id="icon"
+                    role=${this._hasIconActions ? 'button' : nothing}
+                    tabindex=${ifDefined(this._hasIconActions && !this._config?.disable_kbd ? '0' : undefined)}
+                    aria-label=${ifDefined(this._hasIconActions ? this._a11yLabel(state, configState) : undefined)}
+                    ?rotating=${this._rotate(configState)}
+                    @action=${
+                      this._hasIconActions ? (ev: CustomEvent) => this._handleAction(ev, { isIcon: true }) : undefined
+                    }
+                    @pointerenter=${this._hasIconActions ? this._handleRippleIcon : undefined}
+                    @pointerleave=${this._hasIconActions ? this._handleRippleIcon : undefined}
+                    @click=${this._hasIconActions ? this._sendToParent : undefined}
+                    @touchstart=${this._hasIconActions ? this._sendToParent : undefined}
+                    @mousedown=${this._hasIconActions ? this._sendToParent : undefined}
+                    @mouseup=${this._hasIconActions ? this._sendToParent : undefined}
+                    @touchend=${this._hasIconActions ? this._sendToParent : undefined}
+                    @touchcancel=${this._hasIconActions ? this._sendToParent : undefined}
+                    .actionHandler=${
+                      this._hasIconActions
+                        ? actionHandler({
+                            hasDoubleClick: this._isActionDoingSomething(state, this._config!.icon_double_tap_action),
+                            hasHold: this._isActionDoingSomething(state, this._config!.icon_hold_action),
+                            repeat: iconHoldActionEvaluated?.repeat,
+                            repeatLimit: iconHoldActionEvaluated?.repeat_limit,
+                            isMomentary: this._iconMomentary,
+                            disableKbd: this._config?.disable_kbd,
+                          })
+                        : undefined
+                    }
+                  ></ha-state-icon>
+                `
+              : ''
+          }
           ${liveStream ? liveStream : ''}
-          ${entityPicture && !liveStream
-            ? html`
-                <img
-                  class=${classMap(classList)}
-                  src=${until(entityPicture)}
-                  style=${styleMap(entityPictureStyle)}
-                  id="icon"
-                  role=${this._hasIconActions ? 'button' : nothing}
-                  tabindex=${ifDefined(this._hasIconActions && !this._config?.disable_kbd ? '0' : undefined)}
-                  aria-label=${ifDefined(this._hasIconActions ? this._a11yLabel(state, configState) : undefined)}
-                  ?rotating=${this._rotate(configState)}
-                  draggable="false"
-                  @action=${this._hasIconActions
-                    ? (ev: CustomEvent) => this._handleAction(ev, { isIcon: true })
-                    : undefined}
-                  @pointerenter=${this._hasIconActions ? this._handleRippleIcon : undefined}
-                  @pointerleave=${this._hasIconActions ? this._handleRippleIcon : undefined}
-                  @click=${this._hasIconActions ? this._sendToParent : undefined}
-                  @touchstart=${this._hasIconActions ? this._sendToParent : undefined}
-                  @mousedown=${this._hasIconActions ? this._sendToParent : undefined}
-                  @mouseup=${this._hasIconActions ? this._sendToParent : undefined}
-                  @touchend=${this._hasIconActions ? this._sendToParent : undefined}
-                  @touchcancel=${this._hasIconActions ? this._sendToParent : undefined}
-                  .actionHandler=${this._hasIconActions
-                    ? actionHandler({
-                        hasDoubleClick: this._isActionDoingSomething(state, this._config!.icon_double_tap_action),
-                        hasHold: this._isActionDoingSomething(state, this._config!.icon_hold_action),
-                        repeat: iconHoldActionEvaluated?.repeat,
-                        repeatLimit: iconHoldActionEvaluated?.repeat_limit,
-                        isMomentary: this._iconMomentary,
-                        disableKbd: this._config?.disable_kbd,
-                      })
-                    : undefined}
-                />
-              `
-            : ''}
+          ${
+            entityPicture && !liveStream
+              ? html`
+                  <img
+                    class=${classMap(classList)}
+                    src=${until(entityPicture)}
+                    style=${styleMap(entityPictureStyle)}
+                    id="icon"
+                    role=${this._hasIconActions ? 'button' : nothing}
+                    tabindex=${ifDefined(this._hasIconActions && !this._config?.disable_kbd ? '0' : undefined)}
+                    aria-label=${ifDefined(this._hasIconActions ? this._a11yLabel(state, configState) : undefined)}
+                    ?rotating=${this._rotate(configState)}
+                    draggable="false"
+                    @action=${
+                      this._hasIconActions ? (ev: CustomEvent) => this._handleAction(ev, { isIcon: true }) : undefined
+                    }
+                    @pointerenter=${this._hasIconActions ? this._handleRippleIcon : undefined}
+                    @pointerleave=${this._hasIconActions ? this._handleRippleIcon : undefined}
+                    @click=${this._hasIconActions ? this._sendToParent : undefined}
+                    @touchstart=${this._hasIconActions ? this._sendToParent : undefined}
+                    @mousedown=${this._hasIconActions ? this._sendToParent : undefined}
+                    @mouseup=${this._hasIconActions ? this._sendToParent : undefined}
+                    @touchend=${this._hasIconActions ? this._sendToParent : undefined}
+                    @touchcancel=${this._hasIconActions ? this._sendToParent : undefined}
+                    .actionHandler=${
+                      this._hasIconActions
+                        ? actionHandler({
+                            hasDoubleClick: this._isActionDoingSomething(state, this._config!.icon_double_tap_action),
+                            hasHold: this._isActionDoingSomething(state, this._config!.icon_hold_action),
+                            repeat: iconHoldActionEvaluated?.repeat,
+                            repeatLimit: iconHoldActionEvaluated?.repeat_limit,
+                            isMomentary: this._iconMomentary,
+                            disableKbd: this._config?.disable_kbd,
+                          })
+                        : undefined
+                    }
+                  />
+                `
+              : ''
+          }
         </div>
       `;
     } else {
