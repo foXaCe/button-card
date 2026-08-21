@@ -64,8 +64,8 @@
     "ts-lit-plugin": "^2.0.2",
     "typescript": "^6.0.3",
     "typescript-styled-plugin": "^0.18.3",
-    "vitest": "^4.1.10",
-    "@vitest/coverage-v8": "^4.1.10",
+    "vitest": "^4.1.11",
+    "@vitest/coverage-v8": "^4.1.11",
     "happy-dom": "^20.11.2",
     "yarn-audit-fix": "^10.1.1"
   },
