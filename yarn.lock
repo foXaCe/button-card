@@ -3552,10 +3552,10 @@ exponential-backoff@^3.1.1:
   resolved "https://registry.yarnpkg.com/exponential-backoff/-/exponential-backoff-3.1.3.tgz#51cf92c1c0493c766053f9d3abee4434c244d2f6"
   integrity sha512-ZgEeZXj30q+I0EN+CbSSpIyPaJ5HVQD18Z1m+u1FXbAeT94mr1zw50q4q6jiiC447Nl/YTcIYSAftiGqetwXCA==
 
-fast-copy@^4.0.4:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/fast-copy/-/fast-copy-4.0.4.tgz#e569e2331ee6a9d67826c31aeb0e84b50bfb63e6"
-  integrity sha512-eVAiWVNPSEGIzDl5yPuLrx8fNMogScXvD9xp1Kzd41FjRIz2I3sSIcxsFeM5EzFfHAfobdvs8ZySffUopljvIA==
+fast-copy@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/fast-copy/-/fast-copy-4.1.1.tgz#e39f2d403aa77a7e10628e3d8d4d8ed4b2ac5256"
+  integrity sha512-A4QTJmuiztpGtr6AMeJts9R4hbj2ZBUwtOaKrG6rw2y7t6+IaJKjz5M3XDs8BUznxDH43FVc6A0y/gWlMl4UtA==
 
 fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   version "3.1.3"
@@ -3916,10 +3916,10 @@ handlebars@^4.7.7:
   optionalDependencies:
     uglify-js "^3.1.4"
 
-happy-dom@^20.12.0:
-  version "20.12.0"
-  resolved "https://registry.yarnpkg.com/happy-dom/-/happy-dom-20.12.0.tgz#5ae13e8186eb6ea11f03eecb38716659355c36fd"
-  integrity sha512-7uMYJu2SEwwL8vVcKp0C0lnt6d2LSGGe+T+oY79PiCJNNSgFpbxW8n5KuzpDQvrU4mt+fYiK1+Jy7Z2v39YR6g==
+happy-dom@^20.13.2:
+  version "20.14.0"
+  resolved "https://registry.yarnpkg.com/happy-dom/-/happy-dom-20.14.0.tgz#92bd0629d00bcdbb1f254a504980f4c99f0f6652"
+  integrity sha512-4bRh1KzRvKDnFNTlLhzT1RZTpkKhQbQDl9j+7GXszWsvuspYdo29k6OHRf4PwiM6oLb8r/pMWeYiJjkfod5AvQ==
   dependencies:
     "@types/node" ">=20.0.0"
     "@types/whatwg-mimetype" "^3.0.2"
