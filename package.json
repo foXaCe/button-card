@@ -66,12 +66,12 @@
     "typescript-styled-plugin": "^0.18.3",
     "vitest": "^4.1.11",
     "@vitest/coverage-v8": "^4.1.11",
-    "happy-dom": "^20.12.0",
+    "happy-dom": "^20.13.2",
     "yarn-audit-fix": "^10.1.1"
   },
   "dependencies": {
     "@ctrl/tinycolor": "^4.2.0",
-    "fast-copy": "^4.0.4",
+    "fast-copy": "^4.1.1",
     "home-assistant-js-websocket": "^9.6.0",
     "lit": "^3.3.3",
     "memoize-one": "^6.0.0",
