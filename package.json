@@ -67,7 +67,7 @@
     "vitest": "^4.1.11",
     "@vitest/coverage-v8": "^4.1.11",
     "happy-dom": "^20.14.0",
-    "yarn-audit-fix": "^10.1.1"
+    "yarn-audit-fix": "^11.0.4"
   },
   "dependencies": {
     "@ctrl/tinycolor": "^4.2.0",
