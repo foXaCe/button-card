@@ -66,11 +66,11 @@
     "typescript-styled-plugin": "^0.18.3",
     "vitest": "^5.0.0",
     "@vitest/coverage-v8": "^5.0.0",
-    "happy-dom": "^20.14.0",
+    "happy-dom": "^20.14.2",
     "yarn-audit-fix": "^11.0.4"
   },
   "dependencies": {
-    "@ctrl/tinycolor": "^4.2.0",
+    "@ctrl/tinycolor": "^4.2.1",
     "fast-copy": "^4.1.1",
     "home-assistant-js-websocket": "^9.6.0",
     "lit": "^3.3.3",
