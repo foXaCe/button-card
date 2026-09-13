@@ -3844,7 +3844,7 @@ handlebars@^4.7.7:
   optionalDependencies:
     uglify-js "^3.1.4"
 
-happy-dom@^20.14.2:
+happy-dom@^20.14.3:
   version "20.14.5"
   resolved "https://registry.yarnpkg.com/happy-dom/-/happy-dom-20.14.5.tgz#d76cfbb926ebde0575deb3bf92cb3e6bb88b8176"
   integrity sha512-x/RzkpWO40bTjIoT30iQtt64FLLmH/iRcUCN2X//bLx7H3ifkdfPXyqsro/OYtqzIAhiLMMA7mmiOR9C3NOKjQ==
