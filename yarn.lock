@@ -1816,10 +1816,10 @@
     "@typescript-eslint/types" "8.70.0"
     eslint-visitor-keys "^5.0.0"
 
-"@vitest/coverage-v8@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@vitest/coverage-v8/-/coverage-v8-5.0.0.tgz#e8039316bc2cd8ddd21e11021b5dba5a04d96f91"
-  integrity sha512-toMg6PZGCIa/lQNCDoASrfb1ly4hsUKXFtFYC9kD4t78o5Y6LyNJU7AENt8eHPr3quYdxaxK7hj2mnbFfUk9NA==
+"@vitest/coverage-v8@^5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@vitest/coverage-v8/-/coverage-v8-5.0.1.tgz#2b2852c41a6d30dbbbac834f4b073a3fb34e790c"
+  integrity sha512-FRC8ACiudC3dI6MTplzRSYWHDRnIv2IPfbzs4FdoJNsMal/35sWV8hwIfV8ZcqzSPy+uXHeMVONt9CEqtOU17w==
   dependencies:
     "@bcoe/v8-coverage" "^1.0.2"
     "@vitest/istanbul-lib-coverage" "^1.0.0"
@@ -1842,20 +1842,20 @@
   dependencies:
     "@vitest/istanbul-lib-coverage" "1.0.1"
 
-"@vitest/mocker@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@vitest/mocker/-/mocker-5.0.0.tgz#06455717273dc13b92ad4eca64e4e501d76f533d"
-  integrity sha512-66PGTMIiVJP3t4a5yxU9qPtf7MdTBs8jmToMvy+HVflB3Yy13WJZTtPePdvU+wjRV02SKK5doLbSA6o9pwOmiA==
+"@vitest/mocker@5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@vitest/mocker/-/mocker-5.0.1.tgz#e1ca450ac67a57638e79b08481797793700a09f2"
+  integrity sha512-6K1DoBNAPGvuOcSsGA4D6x+5zEEff/KmOOP3uetT2TrGpVfI+HRHRnJJfKi5ib/g1vx8IYHQD8s0pbJz8WQI7Q==
   dependencies:
     "@jridgewell/trace-mapping" "0.3.31"
-    "@vitest/spy" "5.0.0"
+    "@vitest/spy" "5.0.1"
     estree-walker "^3.0.3"
     magic-string "^1.2.3"
 
-"@vitest/spy@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@vitest/spy/-/spy-5.0.0.tgz#4ca353a880fcabae3eabf558126ae8f5542ccbfd"
-  integrity sha512-uy+luWBAPw9XfthoHi5AkfHUnuPYEESjl0p/r+meoBnU8bxg5GDQ3Ey8MjcJ6sqahkL4PFyrvfMJJBw7LbU06g==
+"@vitest/spy@5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@vitest/spy/-/spy-5.0.1.tgz#6dac40afd5620613c8d344542d3c30e8e20e32dd"
+  integrity sha512-rbto/mF/SGERxEgYOek7Xm6B9b+y+mVoo+f4b2LymYO8zM1b7uB5nHuhVMTP2hxdzgxvGiZYGxGIaMvL5y180Q==
 
 "@vscode/web-custom-data@^0.4.2":
   version "0.4.13"
@@ -3924,10 +3924,10 @@ highlight.js@^10.7.1:
   resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-10.7.3.tgz#697272e3991356e40c3cac566a74eef681756531"
   integrity sha512-tzcUFauisWKNHaRkN4Wjl/ZA07gENAjFl3J/c480dprkGTg5EQstgaNFqBfUqCq54kZRIEcreTsAgF/m2quD7A==
 
-home-assistant-js-websocket@^9.6.0:
-  version "9.6.0"
-  resolved "https://registry.yarnpkg.com/home-assistant-js-websocket/-/home-assistant-js-websocket-9.6.0.tgz#46d1743276419e1bd78ba2bb51c6d5d0c0835f90"
-  integrity sha512-TK8HWW6UjCsUdjIBQRB2sBbEya0VniOBFqFjgqSznJiB7YriNgN8jghyThxOkgxwrnt2eN6oWoZMCTSp1o7H+w==
+home-assistant-js-websocket@^9.7.0:
+  version "9.7.0"
+  resolved "https://registry.yarnpkg.com/home-assistant-js-websocket/-/home-assistant-js-websocket-9.7.0.tgz#99a91362beab8f0284d051f5c6addec2af4f9441"
+  integrity sha512-AE/VtwY+sKi7B3934KuIgvj2g06QY9aFVdd2zh1r5ygbpMo2TZbvN9Zoma8L2wHNYFsngTRiZxYOnLlCysIOzA==
 
 hook-std@^4.0.0:
   version "4.0.0"
@@ -7742,13 +7742,13 @@ vary@^1.1.2:
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==
 
-vitest@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/vitest/-/vitest-5.0.0.tgz#a85f075e65bc7c87cce4df2f9114214fbd92f245"
-  integrity sha512-gpsMNoRhMjMktVxPtstOH4/PJuPyovVaMDr4oDilXaGH1EcqM2OE96SoHT2VIQ6fTGtTjqmHDrEu2X9RQiXf8Q==
+vitest@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/vitest/-/vitest-5.0.1.tgz#22505b6481ed0e692b3f6d4fed179da8487d252c"
+  integrity sha512-iA95lQbKEkvrtTkdAgnWbXfbipWiiWe/hDl2P5tMi6WFwD76G0NxXAGp/M9EOcYupeGJRr6wppMc7CoA41TQjg==
   dependencies:
     "@types/chai" "^5.2.2"
-    "@vitest/mocker" "5.0.0"
+    "@vitest/mocker" "5.0.1"
     chai "^6.2.2"
     es-module-lexer "^2.3.2"
     expect-type "^1.4.0"
