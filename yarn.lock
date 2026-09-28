@@ -1804,7 +1804,7 @@
     "@typescript-eslint/types" "8.70.1"
     eslint-visitor-keys "^5.0.0"
 
-"@vitest/coverage-v8@^5.0.1":
+"@vitest/coverage-v8@^5.0.2":
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/@vitest/coverage-v8/-/coverage-v8-5.0.2.tgz#537a3a940292b2eb7a7341fa624c327d0b868ec6"
   integrity sha512-3ffHBEi8DOOBLwIGBhOBZbRfYFYWjMUuxZicONdhuFEFEG5AVsMOSrVeuROskqnqpbOmEJwxM2eTVZ9N3a1t+A==
@@ -7656,7 +7656,7 @@ vary@^1.1.2:
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==
 
-vitest@^5.0.1:
+vitest@^5.0.2:
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/vitest/-/vitest-5.0.2.tgz#2bb525062c52c271ae0313504039637d3d0b785d"
   integrity sha512-7MQrx9pDv5aHiUcovIb/70Ys3tgtkUVgCtledvKdCmEO+/1Dicq5ZqoSxOW034m03oqC+oHOKui2dM6qtMLoJg==
