@@ -3897,7 +3897,7 @@ highlight.js@^10.7.1:
   resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-10.7.3.tgz#697272e3991356e40c3cac566a74eef681756531"
   integrity sha512-tzcUFauisWKNHaRkN4Wjl/ZA07gENAjFl3J/c480dprkGTg5EQstgaNFqBfUqCq54kZRIEcreTsAgF/m2quD7A==
 
-home-assistant-js-websocket@^9.7.0:
+home-assistant-js-websocket@^9.7.1:
   version "9.7.1"
   resolved "https://registry.yarnpkg.com/home-assistant-js-websocket/-/home-assistant-js-websocket-9.7.1.tgz#d8522d50d44d1b18b505e854c650be75e95b6241"
   integrity sha512-zOAiyF+gUc/IsiswYdWKns6SCBbvWb8iJtMX9+Dk0wlbdfcp+I38T2Vx36krWeWMk/GPwoSiYwCs5hk/+Hsn7w==
