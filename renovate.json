@@ -12,9 +12,15 @@
     ":timezone(Europe/Paris)",
     "schedule:nonOfficeHours"
   ],
-  "baseBranchPatterns": ["main"],
-  "labels": ["dependencies"],
-  "assignees": ["foXaCe"],
+  "baseBranchPatterns": [
+    "main"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "assignees": [
+    "foXaCe"
+  ],
   "prCreation": "immediate",
   "prHourlyLimit": 4,
   "prConcurrentLimit": 10,
@@ -22,80 +28,143 @@
   "rebaseWhen": "auto",
   "minimumReleaseAge": "3 days",
   "dependencyDashboard": true,
-  "dependencyDashboardTitle": "📦 Renovate Dependency Dashboard",
+  "dependencyDashboardTitle": "\ud83d\udce6 Renovate Dependency Dashboard",
   "configMigration": true,
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["before 6am on monday"],
+    "schedule": [
+      "before 6am on monday"
+    ],
     "automerge": true
   },
   "vulnerabilityAlerts": {
-    "labels": ["security", "dependencies"],
-    "schedule": ["at any time"],
+    "labels": [
+      "security",
+      "dependencies"
+    ],
+    "schedule": [
+      "at any time"
+    ],
     "prCreation": "immediate",
     "minimumReleaseAge": null
   },
   "packageRules": [
     {
       "description": "Auto-merge safe updates",
-      "matchUpdateTypes": ["patch", "pin", "digest"],
+      "matchUpdateTypes": [
+        "patch",
+        "pin",
+        "digest"
+      ],
       "automerge": true,
       "platformAutomerge": true,
-      "labels": ["dependencies", "auto-merge"]
+      "labels": [
+        "dependencies",
+        "auto-merge"
+      ]
     },
     {
       "description": "GitHub Actions",
-      "matchManagers": ["github-actions"],
-      "labels": ["dependencies", "github-actions"],
+      "matchManagers": [
+        "github-actions"
+      ],
+      "labels": [
+        "dependencies",
+        "github-actions"
+      ],
       "automerge": true,
       "platformAutomerge": true
     },
     {
       "description": "npm deps",
-      "matchManagers": ["npm"],
-      "labels": ["dependencies", "javascript"]
+      "matchManagers": [
+        "npm"
+      ],
+      "labels": [
+        "dependencies",
+        "javascript"
+      ]
     },
     {
       "description": "Lit",
       "groupName": "lit",
-      "matchPackageNames": ["lit", "lit-element", "lit-html", "/^@lit//"]
+      "matchPackageNames": [
+        "lit",
+        "lit-element",
+        "lit-html",
+        "/^@lit//"
+      ]
     },
     {
       "description": "Rollup toolchain",
       "groupName": "rollup",
-      "matchPackageNames": ["rollup", "/^@rollup//", "/^rollup-plugin-/"]
+      "matchPackageNames": [
+        "rollup",
+        "/^@rollup//",
+        "/^rollup-plugin-/"
+      ]
     },
     {
       "description": "Lint & format",
       "groupName": "eslint & prettier",
-      "matchPackageNames": ["/eslint/", "/prettier/"]
+      "matchPackageNames": [
+        "/eslint/",
+        "/prettier/"
+      ]
     },
     {
       "description": "semantic-release",
       "groupName": "semantic-release",
-      "matchPackageNames": ["semantic-release", "/^@semantic-release//"]
+      "matchPackageNames": [
+        "semantic-release",
+        "/^@semantic-release//"
+      ]
     },
     {
       "description": "Babel",
       "groupName": "babel",
-      "matchPackageNames": ["/^@babel//"]
+      "matchPackageNames": [
+        "/^@babel//"
+      ]
     },
     {
       "description": "conventional-changelog-conventionalcommits v10 silently breaks release notes: with @semantic-release/release-notes-generator 14 it renders an empty body (title only, no Bug Fixes section) and exits 0, so CI cannot catch it. Verified on v7.1.2. Stay on v9 until the preset is compatible.",
-      "matchPackageNames": ["conventional-changelog-conventionalcommits"],
+      "matchPackageNames": [
+        "conventional-changelog-conventionalcommits"
+      ],
       "allowedVersions": "<10"
     },
     {
       "description": "TypeScript 7 is not usable here yet: @typescript-eslint/parser refuses to load with 'typescript-eslint does not support TS 7.0' (its peer range is >=4.8.4 <6.1.0, alphas included), and rollup-plugin-typescript2 crashes on 'tsModule.createDocumentRegistry is not a function' since TS 7 dropped the API it relies on. Both are upstream blockers with no compatible release. Lift this once typescript-eslint ships TS 7 support and the rollup plugin follows.",
-      "matchPackageNames": ["typescript"],
+      "matchPackageNames": [
+        "typescript"
+      ],
       "allowedVersions": "<7"
     },
     {
       "description": "Major updates need review",
-      "matchUpdateTypes": ["major"],
-      "labels": ["dependencies", "major"],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "labels": [
+        "dependencies",
+        "major"
+      ],
       "minimumReleaseAge": "7 days"
+    },
+    {
+      "description": "Tout ce qui monte se fusionne seul quand la CI est verte (op\u00e9rateur, 2026-10-14)",
+      "matchUpdateTypes": [
+        "minor",
+        "major"
+      ],
+      "automerge": true,
+      "platformAutomerge": true
     }
   ],
-  "ignorePaths": ["**/node_modules/**", "**/dist/**"]
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/dist/**"
+  ],
+  "rollbackPrs": false
 }
