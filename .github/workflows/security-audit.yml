@@ -30,7 +30,7 @@ jobs:
       # chaque PR, et yarn audit --level high tourne en job dedie.
       - name: Run OSV-Scanner
         continue-on-error: true
-        uses: google/osv-scanner-action/osv-scanner-action@v2.6.0
+        uses: google/osv-scanner-action/osv-scanner-action@v2.7.0
         with:
           scan-args: |-
             --lockfile=yarn.lock
