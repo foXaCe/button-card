@@ -1870,7 +1870,7 @@
     "@typescript-eslint/types" "8.71.2"
     eslint-visitor-keys "^5.0.0"
 
-"@vitest/coverage-v8@^5.0.4":
+"@vitest/coverage-v8@^5.0.5":
   version "5.0.5"
   resolved "https://registry.yarnpkg.com/@vitest/coverage-v8/-/coverage-v8-5.0.5.tgz#0d71664390bf0576486996c2fda8a6db683622b7"
   integrity sha512-4KpkGdIrSqBihx/JyP/e+S+IKB98etg1XDQiLAxksLfcShnwi1VReGeOT9NI43hLHbknosKp/1CCLn9Zgcs8mg==
@@ -7723,7 +7723,7 @@ vary@^1.1.2:
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==
 
-vitest@^5.0.4:
+vitest@^5.0.5:
   version "5.0.5"
   resolved "https://registry.yarnpkg.com/vitest/-/vitest-5.0.5.tgz#266e335f4177541e3e60f876e0694f966a9601f2"
   integrity sha512-cPODOMF8YnkiiYtDdHo6n4wWmBrOBBbOIYH2d33M4l3CdNn72h+qMmO6uXffUN6A5AZFXNND/d+krS9mgkXRfg==
