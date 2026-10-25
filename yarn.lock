@@ -6686,7 +6686,7 @@ rollup-plugin-typescript2@^0.37.0:
     semver "^7.5.4"
     tslib "^2.6.2"
 
-rollup@^4.64.12:
+rollup@^4.65.0:
   version "4.65.0"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-4.65.0.tgz#411a4455c4d3d4a5f394706855595533e5ae1be8"
   integrity sha512-QVCvQUTGDN6JRwi3jVGCY3H4aTHvi9rX0LyoBMkGUvdh/Z6O51CzcLz85BWZaTCDGhl6ySGqYZs+xI1jmPqGcw==
