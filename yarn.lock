@@ -3430,10 +3430,10 @@ exponential-backoff@^3.1.1:
   resolved "https://registry.yarnpkg.com/exponential-backoff/-/exponential-backoff-3.1.3.tgz#51cf92c1c0493c766053f9d3abee4434c244d2f6"
   integrity sha512-ZgEeZXj30q+I0EN+CbSSpIyPaJ5HVQD18Z1m+u1FXbAeT94mr1zw50q4q6jiiC447Nl/YTcIYSAftiGqetwXCA==
 
-fast-copy@^4.2.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/fast-copy/-/fast-copy-4.3.0.tgz#e70f9474596589318adff7232b2a23f7dba658ad"
-  integrity sha512-oWBZLHWpUYt2A471n+ayC4+bJSGDWpl2h3COgBxYX5xHFnr7KqOSrYJZX82ZmrtAfVK+SqsOuNMgsoL+lJquuQ==
+fast-copy@^4.3.0:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/fast-copy/-/fast-copy-4.3.1.tgz#7ba6022c1827a50a5f8f968d1d99bba2c7b6921e"
+  integrity sha512-CRzQaTFOFUs6PuhsAq7lk9Zqr995soJBcFNZlfJS/5keTSl1awREV9dZW4xS2nX4pWbhIIR0xp4h+J8PQxCkvg==
 
 fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   version "3.1.3"
@@ -6133,7 +6133,7 @@ parse-conflict-json@^6.0.0:
     just-diff "^6.0.0"
     just-diff-apply "^5.2.0"
 
-parse-duration@^2.1.9:
+parse-duration@^2.1.10:
   version "2.1.10"
   resolved "https://registry.yarnpkg.com/parse-duration/-/parse-duration-2.1.10.tgz#b2ed788e3880f8f86b92a6e834627f4684405734"
   integrity sha512-l72x6XU6zWWOWfdyobeINOjxDSydA0Gm+Q51PJMtWZmXVnQXXWzFv51r6EiFE+WnjZPUsshIMOU4iONDL8A68Q==
