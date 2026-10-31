@@ -97,10 +97,10 @@
   resolved "https://registry.yarnpkg.com/@colors/colors/-/colors-1.5.0.tgz#bb504579c1cae923e6576a4f5da43d25f97bdbd9"
   integrity sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==
 
-"@ctrl/tinycolor@^4.2.1":
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/@ctrl/tinycolor/-/tinycolor-4.2.1.tgz#a812019b163fc950eac991be4222893af5d5d021"
-  integrity sha512-Vh5uy9Y1JBMId6J1f68TMXnZrTCvNdo9Fu2k0d1YnJngR+sM5kWTKl441c/3TFs+cG0NWOjRWgQ/iaWhbYx+7A==
+"@ctrl/tinycolor@^4.2.2":
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/@ctrl/tinycolor/-/tinycolor-4.2.2.tgz#213091ae98e116c6164e0ac1b7338ec6a7b0f9a8"
+  integrity sha512-9rQHijqB2Rq6qOEC/xHaA6aPlsKGi5kmCQW50O1asn9g63XFeD5NmBwysriistW5Xx0JPafyD/TA7yk2S3pXGQ==
 
 "@dual-bundle/import-meta-resolve@^4.2.1":
   version "4.2.1"
