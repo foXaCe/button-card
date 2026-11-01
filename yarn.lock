@@ -3946,7 +3946,7 @@ highlight.js@^10.7.1:
   resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-10.7.3.tgz#697272e3991356e40c3cac566a74eef681756531"
   integrity sha512-tzcUFauisWKNHaRkN4Wjl/ZA07gENAjFl3J/c480dprkGTg5EQstgaNFqBfUqCq54kZRIEcreTsAgF/m2quD7A==
 
-home-assistant-js-websocket@^9.8.0:
+home-assistant-js-websocket@^9.8.1:
   version "9.8.1"
   resolved "https://registry.yarnpkg.com/home-assistant-js-websocket/-/home-assistant-js-websocket-9.8.1.tgz#d1d795052583bc79c6c270b1c512c57368ac4212"
   integrity sha512-WvovbrSoYLTKfh6aY5SxSWPPy50/mLWLCihQL8G2N+2e3mTrg3QTQCAp4R32/LwbkRBDGj0XNs6JFj8e2IYEUw==
@@ -6204,10 +6204,10 @@ parse-conflict-json@^6.0.0:
     just-diff "^6.0.0"
     just-diff-apply "^5.2.0"
 
-parse-duration@^2.1.10:
-  version "2.1.10"
-  resolved "https://registry.yarnpkg.com/parse-duration/-/parse-duration-2.1.10.tgz#b2ed788e3880f8f86b92a6e834627f4684405734"
-  integrity sha512-l72x6XU6zWWOWfdyobeINOjxDSydA0Gm+Q51PJMtWZmXVnQXXWzFv51r6EiFE+WnjZPUsshIMOU4iONDL8A68Q==
+parse-duration@^2.1.11:
+  version "2.1.11"
+  resolved "https://registry.yarnpkg.com/parse-duration/-/parse-duration-2.1.11.tgz#a9dab05ef63b80ecb295811377298b20bfb1e4c0"
+  integrity sha512-Z1Njr25ZXSDXdN6u5s2rtnn4khB/Yc+/p0kWhJFnvCWJhDsf5hAv7AO0xMa/nF7uafwwi2JxIp6TGx9CTX4diQ==
 
 parse-json@^4.0.0:
   version "4.0.0"
