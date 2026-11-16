@@ -22,8 +22,10 @@
   "rangeStrategy": "bump",
   "rebaseWhen": "auto",
   "minimumReleaseAge": "3 days",
-  "dependencyDashboard": true,
-  "dependencyDashboardTitle": "📦 Renovate Dependency Dashboard",
+  "dependencyDashboard": {
+    "enabled": true,
+    "title": "📦 Renovate Dependency Dashboard"
+  },
   "configMigration": true,
   "lockFileMaintenance": {
     "enabled": true,
