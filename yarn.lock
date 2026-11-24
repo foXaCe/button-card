@@ -102,7 +102,7 @@
   resolved "https://registry.yarnpkg.com/@conventional-changelog/template/-/template-1.4.1.tgz#cfb4cc394ef7adc60d221fe9547fcad2466b866f"
   integrity sha512-mHyyEL0eIEqJ6+aF24+AdZRo4bu4W5GdUiCiCx5X7kfDY51ye8GQJ264uOINObrRSKxtSRCOWPpl9hbOy4UzxQ==
 
-"@ctrl/tinycolor@^4.3.1":
+"@ctrl/tinycolor@^4.3.2":
   version "4.3.2"
   resolved "https://registry.yarnpkg.com/@ctrl/tinycolor/-/tinycolor-4.3.2.tgz#64820946ea63be4b1183a1f2c686834ca2e5cbbf"
   integrity sha512-2UDbkHfMvSXVPLkj7VEwS9NMtu/miOOwkHGn7loA8zxUROlwpJF1UYqXfaIHIaHD4o5a80ouir6QyXbimLk9fg==
