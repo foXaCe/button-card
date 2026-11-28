@@ -71,7 +71,7 @@
   },
   "dependencies": {
     "@ctrl/tinycolor": "^4.3.2",
-    "fast-copy": "^4.3.3",
+    "fast-copy": "^4.3.4",
     "home-assistant-js-websocket": "^9.9.0",
     "lit": "^3.3.3",
     "memoize-one": "^6.0.0",
